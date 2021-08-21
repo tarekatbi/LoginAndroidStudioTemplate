@@ -8,10 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
     ImageView backButton;
+    TextView RegisterFromLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,16 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
 
                 finish();
+            }
+        });
+
+        RegisterFromLogin = findViewById(R.id.RegisterFromLogin);
+
+        RegisterFromLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent r = new Intent(Login.this,Register.class);
+                startActivity(r);
             }
         });
 

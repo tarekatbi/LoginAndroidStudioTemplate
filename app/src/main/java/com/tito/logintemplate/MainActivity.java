@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class MainActivity extends AppCompatActivity {
 
     Button loginButton;
+    TextView RegisterGo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent (MainActivity.this,Login.class));
             }
         });
+
+        RegisterGo = findViewById(R.id.RegisterGo);
+
+        RegisterGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent g = new Intent(MainActivity.this,Register.class);
+                startActivity(g);
+            }
+        });
+
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Animatoo.animateSlideUp(this);
-    }
 }
