@@ -94,36 +94,36 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
 
-    <RadioButton
-        android:id="@+id/radioButton"
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Male"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/radioButton2"
-        app:layout_constraintHorizontal_bias="0.239"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:text="Female"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="Male"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
-        android:layout_width="162dp"
+        android:layout_width="170dp"
         android:layout_height="53dp"
         android:layout_marginTop="76dp"
         android:background="@drawable/button"
